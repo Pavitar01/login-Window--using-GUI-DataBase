@@ -38,8 +38,8 @@ class Register:
         frame1 = Frame(self.root,bg='#f5f5f5')
         frame1.place(x=450, y=100, width=700, height=500)
 
-        title = Label(frame1, text="SIGN UP", font=('times new roman', 25, "bold"), bg='#f5f5f5', fg='green').place(
-            x=50, y=30)
+        title = Label(frame1, text="CREATE ACCOUNT", font=('times new roman', 25, "bold"), bg='#f5f5f5', fg='green').place(
+            x=48, y=30)
         ####################################### VARIABLE ###################################################
         self.txt_Fname = StringVar()
         self.txt_Lname = StringVar()
@@ -121,7 +121,7 @@ class Register:
 
         #####################  reg btn image ######################
 
-        reg = Button(frame1, text='CREATE ACCOUNT', bd=3, cursor='hand2', command=self.Register_data,
+        reg = Button(frame1, text='SIGN UP', bd=3, cursor='hand2', command=self.Register_data,
                      font=('', 10, "bold"), bg='green', fg='#e5e4e2', activebackground='green').place(x=50, y=420,
                                                                                                       width=200,
                                                                                                       height=40)
@@ -152,7 +152,7 @@ class Register:
                 messagebox.showerror("Error", 'User Already Exist With This Main, Please Try With Another Email ')
 
             else:
-                messagebox.showinfo("SUCCESS", "Account Create Successfully", parent=self.root)
+                messagebox.showinfo("SUCCESS", "Account Created Successfully", parent=self.root)
 
                 cur.execute('INSERT INTO  `register`  values(%s,%s,%s,%s,%s,%s,%s)', (
                     self.txt_Fname.get(), self.txt_Lname.get(), self.txt_contact.get(), self.txt_Email.get(),
